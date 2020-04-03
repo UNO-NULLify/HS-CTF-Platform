@@ -1,4 +1,4 @@
-# AWS Documentation
+# AWS Lightsail Configuration Documentation
 1. Navigate to [AWS Lightsail](https://lightsail.aws.amazon.com/) and login. 
 2. Click on the create instance button.
 
