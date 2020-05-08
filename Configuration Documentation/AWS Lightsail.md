@@ -1,4 +1,4 @@
-# AWS Lightsail Configuration Documentation
+# AWS Lightsail Server Creation Documentation
 1. Navigate to [AWS Lightsail](https://lightsail.aws.amazon.com/) and login. 
 2. Click on the create instance button.
 
@@ -16,7 +16,7 @@
 
 ![Instance Plan](https://github.com/UNO-NULLify/HS-CTF-Platform/blob/master/Images/Screen%20Shot%202020-04-03%20at%205.32.45%20PM.png?raw=true)
 
-6. Give the instance a unique name.
+6. Give the instance a unique name. (Example: FileServer1 of Scoreboard1)
 
 ![Instance Name](https://github.com/UNO-NULLify/HS-CTF-Platform/blob/master/Images/Screen%20Shot%202020-04-03%20at%205.35.03%20PM.png?raw=true)
 

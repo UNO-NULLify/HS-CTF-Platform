@@ -1,0 +1,23 @@
+FROM debian:stretch-slim
+
+# Install required packages
+RUN apt-get update && apt-get install -y apache2
+
+# Create directories for all challenge categories
+RUN mkdir -p /var/www/html/CategoryNameHere
+# TODO: Remove all CategoryNameHere and FileNameHere here instances
+# TODO: Perform the same operation with all other category names
+
+# Copy index.html
+RUN rm /var/www/html/index.html
+COPY Static_Files/index.html /var/www/html/
+
+# Crypto Challenges - EXAMPLE ONLY
+RUN mkdir -p /var/www/html/CategoryNameHere/CategoryNameHere100
+COPY CategoryNameHere/100/FileNameHere /var/www/html/CategoryNameHere/CategoryNameHere100
+# TODO: Remove all CategoryNameHere and FileNameHere here instances
+# TODO: Change the challenge point value from 100 to whatever it needs to be
+# TODO: Repeat for all challenges that need to serve a file
+
+# Change owner of index file
+RUN chown -R www-data:www-data /var/www/html/*
