@@ -14,14 +14,17 @@ The fileserver is run in a docker container, which can be configured by performi
 
 6. Perform step 5 for all category names.
 
-7. On a new line, paste the follwing to copy the index.html:
+7. On a new line, paste the follwing to copy the index.html, replacing Static_Files with the path to the index.html:
 ```RUN rm /var/www/html/index.html```
 ```COPY Static_Files/index.html /var/www/html/```
 
-8. Paste the following on a new line, replacing CategoryNameHere" with the category name and "100" with the point value of the challenge:
+8. Make a directory for each challenge, changing the CategortyNameHere to the category name and 100 to the challenge point value:
 ```RUN mkdir -p /var/www/html/CategoryNameHere/CategoryNameHere100```
-```COPY CategoryNameHere/100/FileNameHere /var/www/html/CategoryNameHere/CategoryNameHere100```
 
-9. Repeat step 8 for all challenges
 
-10. Change ownership of the index file: ```RUN chown -R www-data:www-data /var/www/html/*```
+9. Copy the challenges to the correct location, replacing PathToChallengeFile with the path to the file that needs to be served, CategoryNameHere with the category, and 100 with the point value of the challenge:
+```COPY PathToChallengeFile /var/www/html/CategoryNameHere/CategoryNameHere100```
+
+10. Repeat steps 8 and 9 for all challenges
+
+11. Change ownership of the index file: ```RUN chown -R www-data:www-data /var/www/html/*```
