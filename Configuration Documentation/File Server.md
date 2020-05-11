@@ -2,7 +2,7 @@
 
 The fileserver is run in a docker container, which can be configured by performing the following steps. [A sample Dockerfile can be found here]() and can be adapted easily following these instructions or those in the sample Dockerfile. The Dockerfile created will be managed by the central Dockerfile and the container will start by running ```Docker up``` in the root directory.
 
-1. Create a file called ```Dockerfile```.
+1. Create a file called Dockerfile: ```touch Dockerfile```.
 
 2. Open the file in a text editor
 
